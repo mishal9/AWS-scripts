@@ -1,0 +1,20 @@
+module "dynamo" {
+  source                       = "../modules/dynamoDB"
+  namespace                    = var.namespace
+  stage                        = var.stage
+  name                         = var.name
+  hash_key                     = var.hash_key
+  range_key                    = var.range_key
+  autoscale_write_target       = var.autoscale_write_target
+  autoscale_read_target        = var.autoscale_read_target
+  autoscale_min_read_capacity  = var.autoscale_min_read_capacity
+  autoscale_max_read_capacity  = var.autoscale_max_read_capacity
+  autoscale_min_write_capacity = var.autoscale_min_write_capacity
+  autoscale_max_write_capacity = var.autoscale_max_write_capacity
+  dynamodb_attributes          = var.dynamodb_attributes
+  billing_mode                 = var.billing_mode
+  local_secondary_index_map    = var.local_secondary_index_map
+  global_secondary_index_map   = var.global_secondary_index_map
+  stream_enabled               = var.stream_enabled
+  stream_view_type             = var.stream_view_type
+}
