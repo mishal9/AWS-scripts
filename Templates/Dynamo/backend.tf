@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "project.tfstates"
-    key    = "test_module.tfstate"
+    bucket = "jenkins.tfstates"
+    key    = "covid_terraform_dynamo.tfstate"
     region = "us-west-2"
   }
 }
